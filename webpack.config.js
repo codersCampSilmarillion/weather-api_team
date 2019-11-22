@@ -1,14 +1,20 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "main.js",
+    filename: "[name].[chunkhash].js",
     path: path.resolve(__dirname, "dist")
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+      chunkFilename: "[id].css",
+      ignoreOrder: false
+    }),
     new HtmlWebpackPlugin({
       hash: true,
       template: "./src/index.html",
@@ -27,6 +33,20 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: "../",
+              hmr: process.env.NODE_ENV === "development"
+            }
+          },
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ]
   },
@@ -35,7 +55,7 @@ module.exports = {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 3000,
-    open: true
-    //watchContentBase: true
+    open: true,
+    watchContentBase: true
   }
 };
