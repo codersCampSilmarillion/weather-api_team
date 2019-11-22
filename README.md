@@ -22,11 +22,11 @@ or
 ```
 npm
 ```
-*[Install Node.js](https://nodejs.org/en/download/)
+* [Install Node.js](https://nodejs.org/en/download/)
+ 
+* [Install Yarn](https://yarnpkg.com/lang/en/docs/install/#windows-stable)
 
-*[Install Yarn](https://yarnpkg.com/lang/en/docs/install/#windows-stable)
-
-*[Install NPM](https://www.npmjs.com/get-npm)
+* [Install NPM](https://www.npmjs.com/get-npm)
 
 
 ### Installing
