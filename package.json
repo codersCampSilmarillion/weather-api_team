@@ -1,0 +1,12 @@
+{
+  "name": "weather-api_team",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/codersCampSilmarillion/weather-api_team.git",
+  "author": "Noemi, Tomasz, Grzegorz, Marek",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
