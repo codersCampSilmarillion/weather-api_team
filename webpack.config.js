@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -9,8 +10,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      hash: true,
       template: "./src/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
+      alwaysWriteToDisk: true
+    }),
+    new HtmlWebpackHarddiskPlugin({
+      outputPath: path.resolve(__dirname, "dist")
     })
   ],
   module: {
@@ -25,8 +31,11 @@ module.exports = {
     ]
   },
   devServer: {
+    index: "./dist/index.html",
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 3000
+    port: 3000,
+    open: true
+    //watchContentBase: true
   }
 };
