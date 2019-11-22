@@ -5,7 +5,15 @@
   "repository": "https://github.com/codersCampSilmarillion/weather-api_team.git",
   "author": "Noemi, Tomasz, Grzegorz, Marek",
   "license": "MIT",
-  "dependencies": {
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
