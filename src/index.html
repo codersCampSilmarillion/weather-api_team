@@ -6,53 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CcWeather</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/scss" href="styles.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
-    <header class="introduction">
-        <h1>Hello, have a good day!</h1>
-        <p>Set your current location to check the weather.</p>
-    </header>
-    <div class="search">
-        <input class="search__input" type="text" placeholder="Search...." id="searchInput">
-        <button id="searchbutton">Search</button>
-    </div>
-    <container class="wrapper">
-        <div class="weather">
-            <p class="title">► Today</p>
-            <section class="weather__current">
-                <div class="date">
-                    <p>22/11/2019</p>
-                </div>
-                <div class="localization">
-                    <p>Poznań, wielkopolskie, POLAND</p>
+    <container class="content-wrapper">
+        <main class="main-container">
+            <header class="introduction">
+                <h2 class="introduction__greeting">Hello, have a good day!</h2>
+                <h1 class="introduction__title">Set your current location to check the weather.</h1>
+            </header>
+            <form class="search">
+                <input class="search__input" type="text" placeholder="Search....">
+            </form>
+            <section class="today">
+                <h3 class="today__title">► Today</h3>
+                <div class="today__weather">
+                    <div class="info">
+                        <p class="info__date" id="date">date</p>
+                        <p class="info__localation" id="city"></p>
+                    </div>
+                    <container class="general">
+                        <ul class="current">
+                            <li class="current__hour" id="haur">Monday, 8:15</li>
+                            <li class="current__temp" id="temp">15</li>
+                            <li class="current__description" id="description"></li>
+                            <li class="current__real-feel"></li>
+                        </ul>
+                        <ul class="clouds">
+                            <li class="clouds__icon" id="icon">icon</li>
+                            <li class="clouds__title" id="cloud">cloudy</li>
+                            <li class="clouds__description" id="cloudDesc">partly</li>
+                        </ul>
+                    </container>
+                    <ul class="detailed">
+                        <li class="detailed__item">
+                            <div class="detailed__temp-icon"></div>
+                            <div class="detailed__info">
+                                <div class="detailed__value">13 20</div>
+                                <div class="detailed__title">Temperature</div>
+                            </div>
+                        </li>
+                        <li class="detailed__item">
+                            <div class="detailed__wind-icon"></div>
+                            <div class="detailed__info">
+                                <div class="detailed__value" id="wind"></div>
+                                <div class="detailed__title">Wind</div>
+                            </div>
+                        </li>
+                        <li class="detailed__item">
+                            <div class="detailed__uv-icon"></div>
+                            <div class="detailed__info">
+                                <div class="detailed__value" id="uv"></div>
+                                <div class="detailed__title">uv</div>
+                            </div>
+                        </li>
+                        <li class="detailed__item">
+                            <div class="detailed__rain-icon"></div>
+                            <div class="detailed__info">
+                                <div class="detailed__value"></div>
+                                <div class="detailed__title"></div>
+                            </div>
+                        </li>
+                        <li class="detailed__item">
+                            <div class="detailed__hum-icon"></div>
+                            <div class="detailed__info">
+                                <div class="detailed__value"></div>
+                                <div class="detailed__title"></div>
+                            </div>
+                        </li>
+                        <li class="detailed__item">
+                            <div class="detailed__press-icon"></div>
+                            <div class="detailed__info">
+                                <div class="detailed__value"></div>
+                                <div class="detailed__title"></div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
-        </div>
-        <div class="map">
-            <p class="title">► Weather map</p>
-        </div>
+        </main>
+        <aside class="aside">
+            <div class="alerts">
+                <h3 class="alerts__title">► Alerts</h3>
+                <div class="alerts__content"></div>
+            </div>
+            <div class="this-week">
+                <h3 class="this-week__title">This week</h3>
+                <ul class="this-week__list">
+                    <li class="this-week__item">
+                        <div class="this-week__left">
+                            <span class="this-week__day" id="day1">Tuesday</span>
+                            <span class="this-week__temp" id="day1temp">15</span>
+                        </div>
+                        <div class="this-week__right">
+                            <span class="this-week__date" id="day1date">22/11/2019</span>
+                            <span class="this-week__icon"><img src=""  id="day1icon"></span>
+                        </div>
+                    </li>
+                    <li class="this-week__item">
+                        <div class="this-week__left">
+                            <span class="this-week__day" id="day2">Tuesday</span>
+                            <span class="this-week__temp" id="day2temp">15</span>
+                        </div>
+                        <div class="this-week__right">
+                            <span class="this-week__date" id="day2date">22/11/2019</span>
+                            <span class="this-week__icon"><img src=""  id="day2icon"></span>
+                        </div>
+                    </li>
+                    <li class="this-week__item">
+                        <div class="this-week__left">
+                            <span class="this-week__day" id="day3">Tuesday</span>
+                            <span class="this-week__temp" id="day3temp">15</span>
+                        </div>
+                        <div class="this-week__right">
+                            <span class="this-week__date" id="day3date">22/11/2019</span>
+                            <span class="this-week__icon"><img src=""  id="day3icon"></span>
+                        </div>
+                    </li>
+                    <li class="this-week__item">
+                        <div class="this-week__left">
+                            <span class="this-week__day" id="day4">Tuesday</span>
+                            <span class="this-week__temp" id="day4temp">15</span>
+                        </div>
+                        <div class="this-week__right">
+                            <span class="this-week__date" id="day4date">22/11/2019</span>
+                            <span class="this-week__icon"><img src=""  id="day4icon"></span>
+                        </div>
+                    </li>
+                    <li class="this-week__item">
+                        <div class="this-week__left">
+                            <span class="this-week__day" id="day5">Tuesday</span>
+                            <span class="this-week__temp" id="day5temp">15</span>
+                        </div>
+                        <div class="this-week__right">
+                            <span class="this-week__date" id="day5date">22/11/2019</span>
+                            <span class="this-week__icon"><img src=""  id="day5icon"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
     </container>
-
-    <!-- ASIDE BARS -->
-    <aside class="aside">
-        <div class="aside__alerts">
-            <p class="title">► Alerts</p>
-            <section></section>
-        </div>
-    </aside>
-    <aside class="aside">
-        <div class="aside__forecast">
-            <p class="title">► This week</p>
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
-            <section></section>
-        </div>
-    </aside>
-    <script src="index.js"></script>
+    <section class="weather-map">
+        <h3 class="weather-map__title">► Weather map</h3>
+        <div class="weather-map__map"></div>
+    </section>
 </body>
 
 </html>
