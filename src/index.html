@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CcWeather</title>
     <link rel="stylesheet" type="text/scss" href="styles.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -18,7 +18,8 @@
                 <h1 class="introduction__title">Set your current location to check the weather.</h1>
             </header>
             <form class="search">
-                <input class="search__input" type="text" placeholder="Search....">
+                <input class="search__input" type="text" placeholder="Search...." id="searchInput">
+                <button id="searchButton">Search</button>
             </form>
             <section class="today">
                 <h3 class="today__title">► Today</h3>
