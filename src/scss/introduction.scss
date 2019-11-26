@@ -1,0 +1,19 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 33px 0;
+
+  &__greeting {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24.5px;
+  }
+}

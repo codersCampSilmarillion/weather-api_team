@@ -1,0 +1,89 @@
+.today {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+
+    &__weather {
+        background: linear-gradient(180deg, rgba(196, 196, 196, 0.4) 0%, rgba(196, 196, 196, 0) 56.25%);
+        border: 3px solid #D7D7D7;
+        border-radius: 20px;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 50px 40px;
+
+    &__date {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #A5A5A5;
+    }
+
+    &__location {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: #343434;
+    }
+}
+
+.general-info {
+    display: flex;
+}
+
+.current {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__hour {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #A5A5A5;
+    }
+
+    &__temp {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 96px;
+        line-height: 120px;
+        letter-spacing: -0.02em;
+
+        &--celsius {
+            font-size: 48px;
+            line-height: 56px;
+        }
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+    }
+
+    &__real-feel {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #A5A5A5;
+    }
+}
