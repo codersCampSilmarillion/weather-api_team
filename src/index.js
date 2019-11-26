@@ -33,8 +33,7 @@ function dailyPrognoseByLocation(lat, lon) {
     fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&APPID=0599898336f8892a2625cd0151ec957c`).then(result => {
         return result.json();
     }).then(result => {
-        console.log(result);
-        thisWeek(result)
+        thisWeek(result);
     })
 }
 
@@ -55,13 +54,13 @@ function dailyPrognoseByCity(searchedCity) {
         return result.json();
     }).then(result => {
         console.log(result);
-        thisWeek(result)
+        thisWeek(result);
     })
 }
 
 //funckja zamieniająca fahrenheity na celsiuse w przyblizeniu
 function celsius(fahrenheit) {
-    return `${Math.round(fahrenheit-273.15)}°C`
+    return `${Math.round(fahrenheit-273.15)}°C`;
 }
 
 //funkcja pokazująca prognozę na 5 dni, nie działa jeszcze zmiana daty:(
@@ -96,32 +95,32 @@ function thisWeek(resultFromServer) {
 
     day1.innerHTML = `${days[now.getDay()+1]}`;
     day1Temp.innerHTML = celsius(resultFromServer.list[7].main.temp);
-    now.setUTCDate(daysSume + 1)
-    day1Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    now.setUTCDate(daysSume + 1);
+    day1Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
     day1Icon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.list[7].weather[0].icon + '.png';
 
     day2.innerHTML = `${days[now.getDay()+1]}`;
-    day2Temp.innerHTML = celsius(resultFromServer.list[15].main.temp)
-    now.setUTCDate(daysSume + 2)
-    day2Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    day2Temp.innerHTML = celsius(resultFromServer.list[15].main.temp);
+    now.setUTCDate(daysSume + 2);
+    day2Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
     day2Icon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.list[15].weather[0].icon + '.png';
 
     day3.innerHTML = `${days[now.getDay()+1]}`;
     day3Temp.innerHTML = celsius(resultFromServer.list[23].main.temp);
-    now.setUTCDate(daysSume + 3)
-    day3Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    now.setUTCDate(daysSume + 3);
+    day3Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
     day3Icon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.list[23].weather[0].icon + '.png';
 
     day4.innerHTML = `${days[now.getDay()+1]}`;
     day4Temp.innerHTML = celsius(resultFromServer.list[31].main.temp);
-    now.setUTCDate(daysSume + 4)
-    day4Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    now.setUTCDate(daysSume + 4);
+    day4Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
     day4Icon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.list[31].weather[0].icon + '.png';
 
     day5.innerHTML = `${days[now.getDay()+1]}`;
     day5Temp.innerHTML = celsius(resultFromServer.list[39].main.temp);
-    now.setUTCDate(daysSume + 5)
-    day5Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    now.setUTCDate(daysSume + 5);
+    day5Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
     day5Icon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.list[39].weather[0].icon + '.png';
 };
 
