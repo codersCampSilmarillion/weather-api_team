@@ -1,10 +1,11 @@
 import {getDate, getTime} from "./js/getDate";
 import {getLocalization} from "./js/wetByLocation"
-import {getMap} from "./js/map";
-
+//import {getMap1} from "./js/map";
+import {setPositionUv} from "./js/uvIndex";
 
 
 getDate();
 getTime();
 getLocalization();
-getMap();
+setPositionUv();
+//getMap1();
