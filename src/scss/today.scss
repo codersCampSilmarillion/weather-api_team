@@ -12,8 +12,8 @@
     }
 
     &__weather {
-        background: linear-gradient(180deg, rgba(196, 196, 196, 0.4) 0%, rgba(196, 196, 196, 0) 56.25%);
-        border: 3px solid #D7D7D7;
+        background: #ffffff;
+        box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.02);
         border-radius: 20px;
     }
 }
@@ -28,7 +28,7 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 24px;
-        color: #A5A5A5;
+        color: #a5a5a5;
     }
 
     &__location {
@@ -38,11 +38,17 @@
         line-height: 32px;
         letter-spacing: 0.02em;
         color: #343434;
+
+        &--city {
+            font-weight: bold;
+        }
     }
 }
 
 .general-info {
     display: flex;
+    justify-content: space-around;
+    margin-bottom: 52px;
 }
 
 .current {
@@ -56,15 +62,16 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 24px;
-        color: #A5A5A5;
+        color: #a5a5a5;
     }
 
     &__temp {
         font-style: normal;
         font-weight: normal;
         font-size: 96px;
-        line-height: 120px;
+        line-height: 100px;
         letter-spacing: -0.02em;
+        display: flex;
 
         &--celsius {
             font-size: 48px;
@@ -77,6 +84,7 @@
         font-size: 24px;
         line-height: 32px;
         letter-spacing: 0.02em;
+        color: #343434;
     }
 
     &__real-feel {
@@ -84,6 +92,104 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 24px;
+        color: #a5a5a5;
+    }
+}
+
+.clouds {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__icon {
+        background-image: url("../../assets/icons/cloud-icon.svg");
+        width: 164px;
+        height: 100px;
+        margin-bottom: 24.5px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: #343434;
+    }
+
+    &__description {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
         color: #A5A5A5;
+    }
+}
+
+.detailed-info {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto repeat(3, 1fr) auto;
+    grid-template-rows: repeat(2, 1fr);
+
+    &__item {
+        background: #FAFAFA;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__temp-icon,
+    &__wind-icon,
+    &__uv-icon,
+    &__rain-icon,
+    &__hum-icon,
+    &__press-icon {
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 24px;
+    }
+
+
+    &__temp-icon {
+        background-image: url("../../assets/icons/temp-icon.svg");
+    }
+
+    &__wind-icon {
+        background-image: url("../../assets/icons/wind-icon.svg");
+    }
+
+    &__uv-icon {
+        background-image: url("../../assets/icons/uv-icon.svg");
+    }
+
+    &__rain-icon {
+        background-image: url("../../assets/icons/rain-icon.svg");
+    }
+
+    &__hum-icon {
+        background-image: url("../../assets/icons/hum-icon.svg");
+    }
+
+    &__press-icon {
+        background-image: url("../../assets/icons/press-icon.svg");
+    }
+
+    &__value {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        color: #343434;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        color: #929292;
     }
 }
