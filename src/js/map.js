@@ -1,25 +1,51 @@
-import img from './file.png';
-import Map from 'ol/Map';
-import View from 'ol/View';
-import TileLayer from 'ol/layer/Tile';
-import XYZ from 'ol/source/XYZ';
-import {fromLonLat} from 'ol/proj';
-import "./styles.css";
+import 'ol/ol.css';
+import {Map, View} from 'ol';
 
-// function map() {
-//     var map = new Map({ // a map object is created
-//         target: 'map', // the id of the div in html to contain the map
-//         layers: [ // list of layers available in the map
-//             new TileLayer({ // first and only layer is the OpenStreetMap tiled layer
-//                 source: new XYZ
-//             })
-//         ],
-//         view: new View({ // view allows to specify center, resolution, rotation of the map
-//             center: fromLonLat([33.411254, 35.144581]), // center of the map
-//             zoom: 15 // zoom level (0 = zoomed out)
-//         })
-//     });
-//
-// }
-//
-// export {map};
+import OSM from 'ol/source/OSM';
+import Stamen from 'ol/source/Stamen';
+import KML from 'ol/format/KML';
+import VectorSource from 'ol/source/Vector';
+import {Heatmap as HeatmapLayer, Tile as TileLayer} from 'ol/layer';
+
+const APIKEY = `621ade6f9cf22647cbe0dc0e15904a9c`;
+
+function getMap1() {
+    if (!('geolocation' in navigator)) {
+        error.style.display = "block";
+        return error.message = `<p>Something go wrong</p>`
+    } else {
+        return navigator.geolocation.getCurrentPosition(setPosition);
+    }
+}
+
+//user position
+function setPosition(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let api = `https://tile.openweathermap.org/map/clouds_new/{4}/${latitude}/${longitude}.png?appid=${APIKEY}`;
+    map(api);
+}
+
+function getMap() {
+    var layer_temp;
+    var main_layer;
+    main_layer = new TileLayer({
+        source: new OSM({
+        })
+    });
+
+    const map = new Map({
+        target: 'map',
+        layers: [
+            main_layer, //layer_temp
+        ],
+        view: new View({
+            center: [37.41, 8.82],
+            zoom: 4
+        })
+
+    });
+}
+
+
+export {getMap};

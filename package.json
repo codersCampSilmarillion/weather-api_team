@@ -2,7 +2,10 @@
   "name": "weather-api_team",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/codersCampSilmarillion/weather-api_team.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codersCampSilmarillion/weather-api_team.git"
+  },
   "author": "Noemi, Tomasz, Grzegorz, Marek",
   "license": "MIT",
   "scripts": {
@@ -34,5 +37,10 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
-  }
+  },
+  "description": "CodersCamp weather API project by Noemi, Tomasz, Grzegorz and Marek",
+  "bugs": {
+    "url": "https://github.com/codersCampSilmarillion/weather-api_team/issues"
+  },
+  "homepage": "https://github.com/codersCampSilmarillion/weather-api_team#readme"
 }
