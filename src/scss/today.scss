@@ -127,15 +127,17 @@
 
 .detailed-info {
     list-style-type: none;
-    display: grid;
-    grid-template-columns: auto repeat(3, 1fr) auto;
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     &__item {
         background: #FAFAFA;
         margin-bottom: 16px;
         display: flex;
         align-items: center;
+        width: 33.33333%;
+        padding: 0 7%;
     }
 
     &__temp-icon,
@@ -144,12 +146,12 @@
     &__rain-icon,
     &__hum-icon,
     &__press-icon {
-        width: 24px;
-        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
-        margin: 24px;
+        margin: 24px 24px 24px 0;
     }
 
 
