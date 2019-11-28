@@ -10,8 +10,8 @@ function dailyPrognoseByLocation(api) {
 }
 
 //funckja zamieniająca kelwiny na stopnie celsjusza w przyblizeniu
-function celsius(fahrenheit) {
-    return `${Math.round(fahrenheit-273.15)}°C`
+function celsius(kelwin) {
+    return `${Math.round(kelwin-273.15)}`
 }
 
 //funkcja pokazująca prognozę na 5 dni
