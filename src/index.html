@@ -1,162 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CcWeather</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>CcWeather</title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
-
-<body>
-  <container class="content-wrapper">
-    <main class="main-container">
-      <header class="introduction">
-        <h2 class="introduction__greeting">Hello, have a good day!</h2>
-        <h1 class="introduction__title">
-          Set your current location to check the weather.
-        </h1>
-      </header>
-      <form class="search">
-        <span class="search__icon"></span>
-        <input class="search__input" type="text" placeholder="Search..." />
-      </form>
-      <section class="today">
-        <h3 class="today__title">► Today</h3>
-        <div class="today__weather">
-          <div class="info">
-            <p class="info__date">22/11/2019</p>
-            <p class="info__location"><span class="info__location--city">Poznań</span>, wielkopolskie, POLAND</p>
-          </div>
-          <container class="general-info">
-            <ul class="current">
-              <li class="current__hour">Monday, 8:15</li>
-              <li class="current__temp">
-                12 <span class="current__temp--celsius">°C</span>
+  <body>
+    <container class="content-wrapper">
+      <main class="main-container">
+        <header class="introduction">
+          <h2 class="introduction__greeting">Hello, have a good day!</h2>
+          <h1 class="introduction__title">
+            Set your current location to check the weather.
+          </h1>
+        </header>
+        <form class="search">
+          <span class="search__icon"></span>
+          <input class="search__input" type="text" placeholder="Search..." />
+        </form>
+        <section class="today">
+          <h3 class="today__title">► Today</h3>
+          <div class="today__weather">
+            <div class="info">
+              <p class="info__date">22/11/2019</p>
+              <p class="info__location">
+                <span class="info__location--city">Poznań</span>, wielkopolskie,
+                POLAND
+              </p>
+            </div>
+            <container class="general-info">
+              <ul class="current">
+                <li class="current__hour">Monday, 8:15</li>
+                <li class="current__temp">
+                  12 <span class="current__temp--celsius">°C</span>
+                </li>
+                <li class="current__description">Nieco piźdźi</li>
+                <li class="current__real-feel">REAL FEEL 17°C</li>
+              </ul>
+              <ul class="clouds">
+                <li class="clouds__icon"></li>
+                <li class="clouds__title">Cloudy</li>
+                <li class="clouds__description">PARTLY</li>
+              </ul>
+            </container>
+            <ul class="detailed-info">
+              <li class="detailed-info__item">
+                <div class="detailed-info__temp-icon"></div>
+                <div class="detailed-info__info">
+                  <div class="detailed-info__value">▾13°C ▴20°C</div>
+                  <div class="detailed-info__title">TEMPERATURE</div>
+                </div>
               </li>
-              <li class="current__description">Nieco piźdźi</li>
-              <li class="current__real-feel">REAL FEEL 17°C</li>
+              <li class="detailed-info__item">
+                <div class="detailed-info__wind-icon"></div>
+                <div class="detailed-info__info">
+                  <div class="detailed-info__value">9 km/h</div>
+                  <div class="detailed-info__title">WIND</div>
+                </div>
+              </li>
+              <li class="detailed-info__item">
+                <div class="detailed-info__uv-icon"></div>
+                <div class="detailed-info__info">
+                  <div class="detailed-info__value">Low</div>
+                  <div class="detailed-info__title">UV INDEX</div>
+                </div>
+              </li>
+              <li class="detailed-info__item">
+                <div class="detailed-info__rain-icon"></div>
+                <div class="detailed-info__info">
+                  <div class="detailed-info__value">20%</div>
+                  <div class="detailed-info__title">RAIN</div>
+                </div>
+              </li>
+              <li class="detailed-info__item">
+                <div class="detailed-info__hum-icon"></div>
+                <div class="detailed-info__info">
+                  <div class="detailed-info__value">40%</div>
+                  <div class="detailed-info__title">HUMIDITY</div>
+                </div>
+              </li>
+              <li class="detailed-info__item">
+                <div class="detailed-info__press-icon"></div>
+                <div class="detailed-info__info">
+                  <div class="detailed-info__value">1020 hPa</div>
+                  <div class="detailed-info__title">PRESSURE</div>
+                </div>
+              </li>
             </ul>
-            <ul class="clouds">
-              <li class="clouds__icon"></li>
-              <li class="clouds__title">Cloudy</li>
-              <li class="clouds__description">PARTLY</li>
-            </ul>
-          </container>
-          <ul class="detailed-info">
-            <li class="detailed-info__item">
-              <div class="detailed-info__temp-icon"></div>
-              <div class="detailed-info__info">
-                <div class="detailed-info__value">▾13°C ▴20°C</div>
-                <div class="detailed-info__title">TEMPERATURE</div>
+          </div>
+        </section>
+      </main>
+      <aside class="aside">
+        <div class="alerts">
+          <h3 class="alerts__title">► Alerts</h3>
+          <div class="alerts__content"></div>
+        </div>
+        <div class="this-week">
+          <h3 class="this-week__title">► This week</h3>
+          <ul class="this-week__list">
+            <li class="this-week__item">
+              <div class="this-week__left">
+                <span class="this-week__day">Tuesday</span>
+                <div class="this-week__temp">
+                  15<span class="this-week__temp--celsius">°C</span>
+                </div>
+              </div>
+              <div class="this-week__right">
+                <span class="this-week__date">22/11/2019</span>
+                <span class="this-week__icon"></span>
               </div>
             </li>
-            <li class="detailed-info__item">
-              <div class="detailed-info__wind-icon"></div>
-              <div class="detailed-info__info">
-                <div class="detailed-info__value">9 km/h</div>
-                <div class="detailed-info__title">WIND</div>
+            <li class="this-week__item">
+              <div class="this-week__left">
+                <span class="this-week__day">Tuesday</span>
+                <div class="this-week__temp">
+                  15<span class="this-week__temp--celsius">°C</span>
+                </div>
+              </div>
+              <div class="this-week__right">
+                <span class="this-week__date">22/11/2019</span>
+                <span class="this-week__icon"></span>
               </div>
             </li>
-            <li class="detailed-info__item">
-              <div class="detailed-info__uv-icon"></div>
-              <div class="detailed-info__info">
-                <div class="detailed-info__value">Low</div>
-                <div class="detailed-info__title">UV INDEX</div>
+            <li class="this-week__item">
+              <div class="this-week__left">
+                <span class="this-week__day">Tuesday</span>
+                <div class="this-week__temp">
+                  15<span class="this-week__temp--celsius">°C</span>
+                </div>
+              </div>
+              <div class="this-week__right">
+                <span class="this-week__date">22/11/2019</span>
+                <span class="this-week__icon"></span>
               </div>
             </li>
-            <li class="detailed-info__item">
-              <div class="detailed-info__rain-icon"></div>
-              <div class="detailed-info__info">
-                <div class="detailed-info__value">20%</div>
-                <div class="detailed-info__title">RAIN</div>
+            <li class="this-week__item">
+              <div class="this-week__left">
+                <span class="this-week__day">Tuesday</span>
+                <div class="this-week__temp">
+                  15<span class="this-week__temp--celsius">°C</span>
+                </div>
+              </div>
+              <div class="this-week__right">
+                <span class="this-week__date">22/11/2019</span>
+                <span class="this-week__icon"></span>
               </div>
             </li>
-            <li class="detailed-info__item">
-              <div class="detailed-info__hum-icon"></div>
-              <div class="detailed-info__info">
-                <div class="detailed-info__value">40%</div>
-                <div class="detailed-info__title">HUMIDITY</div>
+            <li class="this-week__item">
+              <div class="this-week__left">
+                <span class="this-week__day">Tuesday</span>
+                <div class="this-week__temp">
+                  15<span class="this-week__temp--celsius">°C</span>
+                </div>
               </div>
-            </li>
-            <li class="detailed-info__item">
-              <div class="detailed-info__press-icon"></div>
-              <div class="detailed-info__info">
-                <div class="detailed-info__value">1020 hPa</div>
-                <div class="detailed-info__title">PRESSURE</div>
+              <div class="this-week__right">
+                <span class="this-week__date">22/11/2019</span>
+                <span class="this-week__icon"></span>
               </div>
             </li>
           </ul>
         </div>
-      </section>
-    </main>
-    <aside class="aside">
-      <div class="alerts">
-        <h3 class="alerts__title">► Alerts</h3>
-        <div class="alerts__content"></div>
-      </div>
-      <div class="this-week">
-        <h3 class="this-week__title">This week</h3>
-        <ul class="this-week__list">
-          <li class="this-week__item">
-            <div class="this-week__left">
-              <span class="this-week__day">Tuesday</span>
-              <span class="this-week__temp">15</span>
-            </div>
-            <div class="this-week__right">
-              <span class="this-week__date">22/11/2019</span>
-              <span class="this-week__icon"></span>
-            </div>
-          </li>
-          <li class="this-week__item">
-            <div class="this-week__left">
-              <span class="this-week__day">Tuesday</span>
-              <span class="this-week__temp">15</span>
-            </div>
-            <div class="this-week__right">
-              <span class="this-week__date">22/11/2019</span>
-              <span class="this-week__icon"></span>
-            </div>
-          </li>
-          <li class="this-week__item">
-            <div class="this-week__left">
-              <span class="this-week__day">Tuesday</span>
-              <span class="this-week__temp">15</span>
-            </div>
-            <div class="this-week__right">
-              <span class="this-week__date">22/11/2019</span>
-              <span class="this-week__icon"></span>
-            </div>
-          </li>
-          <li class="this-week__item">
-            <div class="this-week__left">
-              <span class="this-week__day">Tuesday</span>
-              <span class="this-week__temp">15</span>
-            </div>
-            <div class="this-week__right">
-              <span class="this-week__date">22/11/2019</span>
-              <span class="this-week__icon"></span>
-            </div>
-          </li>
-          <li class="this-week__item">
-            <div class="this-week__left">
-              <span class="this-week__day">Tuesday</span>
-              <span class="this-week__temp">15</span>
-            </div>
-            <div class="this-week__right">
-              <span class="this-week__date">22/11/2019</span>
-              <span class="this-week__icon"></span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </aside>
-  </container>
-  <section class="weather-map">
-    <h3 class="weather-map__title">► Weather map</h3>
-    <div class="weather-map__map"></div>
-  </section>
-</body>
-
+      </aside>
+    </container>
+    <section class="weather-map">
+      <h3 class="weather-map__title">► Weather map</h3>
+      <div class="weather-map__map"></div>
+    </section>
+  </body>
 </html>

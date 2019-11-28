@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
 
+
     &__title {
         font-style: normal;
         font-weight: normal;
@@ -15,6 +16,7 @@
         background: #ffffff;
         box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.02);
         border-radius: 20px;
+        min-height: 600px;
     }
 }
 
