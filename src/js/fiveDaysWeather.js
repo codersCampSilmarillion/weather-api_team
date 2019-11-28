@@ -1,7 +1,8 @@
 
 //funkcja pobierająca dane o prognozie na 5dni na podstawie danych geograficznych
-function dailyPrognoseByLocation(lat, lon) {
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&APPID=0599898336f8892a2625cd0151ec957c`).then(result => {
+function dailyPrognoseByLocation(api) {
+    fetch(api)
+        .then(result => {
         return result.json();
     }).then(result => {
         thisWeek(result)

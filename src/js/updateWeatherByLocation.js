@@ -7,7 +7,7 @@ let cloudDesc = document.getElementById("cloudDesc");
 let detailetDesc = document.getElementById("detailedDesc");
 
 
-function updateWeather(weather) {
+function updateWeatherByLocation(weather) {
     city.innerHTML = `${weather.city} ${weather.country}`;
     temp.innerHTML = `${weather.temp} C&deg`;
     desc.innerHTML = `${weather.description}`;
@@ -18,4 +18,4 @@ function updateWeather(weather) {
 
 }
 
-export {updateWeather};
+export {updateWeatherByLocation};
