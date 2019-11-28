@@ -2,14 +2,25 @@
   "name": "weather-api_team",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/codersCampSilmarillion/weather-api_team.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codersCampSilmarillion/weather-api_team.git"
+  },
   "author": "Noemi, Tomasz, Grzegorz, Marek",
   "license": "MIT",
   "scripts": {
     "dev": " webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "il": "0.0.0",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.2.1",
+    "ol": "^6.1.1",
+    "openstreetmap-stream": "^0.1.0",
+    "world-map": "0.0.9"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
@@ -20,10 +31,16 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
+    "parcel-bundler": "^1.12.4",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
-  }
+  },
+  "description": "CodersCamp weather API project by Noemi, Tomasz, Grzegorz and Marek",
+  "bugs": {
+    "url": "https://github.com/codersCampSilmarillion/weather-api_team/issues"
+  },
+  "homepage": "https://github.com/codersCampSilmarillion/weather-api_team#readme"
 }
