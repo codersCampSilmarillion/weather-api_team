@@ -3,6 +3,8 @@
 @import "./today.scss";
 @import "./alerts.scss";
 @import "./this-week.scss";
+@import "./map.scss";
+
 
 * {
     font-family: Roboto, sans-serif;
@@ -18,7 +20,6 @@ body {
 .content-wrapper {
     display: flex;
     justify-content: center;
-    width: 100vw;
 }
 
 .main-container {

@@ -1,0 +1,17 @@
+.weather-map {
+    margin: 160px auto 100px auto;
+    width: 72.63%;
+
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+
+    &__map {
+        height: 418px;
+        background: #ffffff;
+    }
+}
