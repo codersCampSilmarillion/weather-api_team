@@ -24,7 +24,6 @@ function dailyPrognoseByCity(searchedCity) {
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${searchedCity}&APPID=0599898336f8892a2625cd0151ec957c`).then(result => {
         return result.json();
     }).then(result => {
-        console.log(result);
         thisWeek(result)
     })
 }
