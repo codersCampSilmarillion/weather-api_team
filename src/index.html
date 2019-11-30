@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CcWeather</title>
+    <title>WeatherApp</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -21,7 +21,7 @@
             <form class="search">
                 <span class="search__icon"></span>
                 <input class="search__input" type="text" placeholder="Search..." id="searchInput">
-                <button id="searchButton">Search</button>
+                <button id="searchButton" style="display: none;">Search</button>
             </form>
             <section class="today">
                 <h3 class="today__title">► Today</h3>
@@ -36,12 +36,12 @@
                         <ul class="current">
                             <li class="current__hour" id="haur"></li>
                             <li class="current__temp" id="temp">
-                                 <span class="current__temp--celsius"></span>
+                                <span class="current__temp--celsius"></span>
                             </li>
                             <li class="current__description" id="description"></li>
                         </ul>
                         <ul class="clouds">
-                            <li class="clouds__icon"><img src="" id="icon"></li>
+                            <li class="clouds__icon" id="icon"></li>
                             <li class="clouds__title" id="cloudDecs"></li>
                         </ul>
                     </container>
@@ -70,8 +70,8 @@
                         <li class="detailed-info__item">
                             <div class="detailed-info__rain-icon"></div>
                             <div class="detailed-info__info">
-                                <div class="detailed-info__value" id="rain">20%</div>
-                                <div class="detailed-info__title">RAIN</div>
+                                <div class="detailed-info__value" id="rain">10km</div>
+                                <div class="detailed-info__title">VISIBILITY</div>
                             </div>
                         </li>
                         <li class="detailed-info__item">
@@ -95,7 +95,7 @@
         <aside class="aside">
             <div class="alerts">
                 <h3 class="alerts__title">► Alerts</h3>
-                <div class="alerts__content" id="alerts"></div>
+                <div class="alerts__content" id="alerts">Currently no alerts.</div>
             </div>
             <div class="this-week">
                 <h3 class="this-week__title">► This week</h3>
@@ -106,7 +106,7 @@
                             <div class="this-week__temp">
                                 <span id="day1temp">15</span><span class="this-week__temp--celsius">°C</span>
                             </div>
-                        </div>
+                        </div> 
                         <div class="this-week__right">
                             <span class="this-week__date" id="day1date">22/11/2019</span>
                             <span class="this-week__icon"><img src="" id="day1icon"></span>
