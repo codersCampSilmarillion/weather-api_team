@@ -17,3 +17,47 @@
     font-size: 24.5px;
   }
 }
+
+@media (max-width: 1070px) {
+  .introduction {
+    &__greeting {
+      font-size: 42px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 503px) {
+  .introduction {
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .introduction {
+    &__greeting {
+      font-size: 36px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .introduction {
+    &__greeting {
+      text-align: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+  }
+}

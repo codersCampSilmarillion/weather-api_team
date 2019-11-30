@@ -36,3 +36,38 @@ body {
     width: 19.4%;
     margin-top: 85px;
 }
+
+@media (max-width: 945px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-container,
+    .aside {
+        width: 72.63%;
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width: 608px) {
+
+    .main-container,
+    .aside,
+    .weather-map {
+        width: 90%;
+    }
+
+    .weather-map {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 410px) {
+
+    .main-container,
+    .aside {
+        margin-top: 30px;
+    }
+}

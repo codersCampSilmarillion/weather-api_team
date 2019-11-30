@@ -107,7 +107,7 @@
     &__icon {
         background-image: url("../../assets/icons/cloud-icon.svg");
         width: 164px;
-        height: 100px;
+        height: 101px;
         margin-bottom: 24.5px;
     }
 
@@ -195,5 +195,26 @@
         line-height: 20px;
         letter-spacing: 0.05em;
         color: #929292;
+    }
+}
+
+@media (max-width: 1160px) {
+    .detailed-info__item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 410px) {
+    .general-info {
+        flex-direction: column;
+    }
+
+    .clouds {
+        margin-top: 30px;
+    }
+
+    .detailed-info__item {
+        width: 100%;
+        justify-content: center;
     }
 }
