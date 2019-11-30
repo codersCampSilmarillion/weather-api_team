@@ -7,8 +7,7 @@
     &__title {
         font-style: normal;
         font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 18px;
         margin-bottom: 16px;
     }
 
@@ -16,28 +15,25 @@
         background: #ffffff;
         box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.02);
         border-radius: 20px;
-        min-height: 600px;
     }
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    margin: 40px 0 50px 40px;
+    margin: 30px 0 37.5px 30px;
 
     &__date {
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 12px;
         color: #a5a5a5;
     }
 
     &__location {
         font-style: normal;
         font-weight: 500;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 18px;
         letter-spacing: 0.02em;
         color: #343434;
 
@@ -50,7 +46,7 @@
 .general-info {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 52px;
+    margin-bottom: 35px;
 }
 
 .current {
@@ -62,29 +58,25 @@
     &__hour {
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 12px;
         color: #a5a5a5;
     }
 
     &__temp {
         font-style: normal;
         font-weight: normal;
-        font-size: 96px;
-        line-height: 100px;
+        font-size: 72px;
         letter-spacing: -0.02em;
         display: flex;
 
         &--celsius {
-            font-size: 48px;
-            line-height: 56px;
+            font-size: 36px;
         }
     }
 
     &__description {
         font-weight: 500;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 18px;
         letter-spacing: 0.02em;
         color: #343434;
     }
@@ -92,8 +84,7 @@
     &__real-feel {
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 12px;
         color: #a5a5a5;
     }
 }
@@ -106,23 +97,23 @@
 
     &__icon {
         background-image: url("../../assets/icons/cloud-icon.svg");
-        width: 164px;
-        height: 101px;
+        background-position: center center;
+        background-size: cover;
+        width: 123px;
+        height: 76px;
         margin-bottom: 24.5px;
     }
 
     &__title {
         font-weight: 500;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 18px;
         letter-spacing: 0.02em;
         color: #343434;
     }
 
     &__description {
         font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 12px;
         color: #A5A5A5;
     }
 }
@@ -135,7 +126,7 @@
 
     &__item {
         background: #FAFAFA;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         display: flex;
         align-items: center;
         width: 33.33333%;
@@ -153,7 +144,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
-        margin: 24px 24px 24px 0;
+        margin: 18px 18px 18px 0;
     }
 
 
@@ -183,16 +174,14 @@
 
     &__value {
         font-weight: bold;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 12px;
         color: #343434;
     }
 
     &__title {
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 12px;
         letter-spacing: 0.05em;
         color: #929292;
     }

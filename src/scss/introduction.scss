@@ -7,46 +7,13 @@
   &__greeting {
     font-style: normal;
     font-weight: normal;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 36px;
   }
 
   &__title {
     font-style: normal;
     font-weight: normal;
-    font-size: 24.5px;
-  }
-}
-
-@media (max-width: 1070px) {
-  .introduction {
-    &__greeting {
-      font-size: 42px;
-    }
-
-    &__title {
-      font-size: 22px;
-    }
-  }
-}
-
-@media (max-width: 503px) {
-  .introduction {
-    &__title {
-      font-size: 20px;
-    }
-  }
-}
-
-@media (max-width: 490px) {
-  .introduction {
-    &__greeting {
-      font-size: 36px;
-    }
-
-    &__title {
-      font-size: 18px;
-    }
+    font-size: 18.5px;
   }
 }
 
