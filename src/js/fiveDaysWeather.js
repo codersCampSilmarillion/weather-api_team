@@ -50,7 +50,6 @@ function dailyPrognoseByLocation(api) {
         }).then(function() {
             thisWeek(weather);
         })
-    })
 }
 
 //funckja zamieniająca kelwiny na stopnie celsjusza w przyblizeniu
@@ -96,8 +95,7 @@ function thisWeek(resultFromServer) {
     now.setDate(daysSume + 1);
     day5Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
     day5Icon.src = '../../assets/WetIcons/' + resultFromServer.day5icon + '.svg';
-    day5Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
-    day5Icon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.day5icon + '.png';
+
 
     const apiUV = `http://api.openweathermap.org/data/2.5/uvi?appid=0599898336f8892a2625cd0151ec957c&lat=${resultFromServer.lat}&lon=${resultFromServer.lon}`;
     getUv(apiUV);
