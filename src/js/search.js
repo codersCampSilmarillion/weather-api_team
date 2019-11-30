@@ -1,7 +1,6 @@
 import {backgroundChange} from "./backgroundChange";
-import {dailyPrognoseByLocation} from "./fiveDaysWeather";
+import {dailyPrognoseByLocation, getCoord} from "./fiveDaysWeather";
 import {getWeatherByLocation} from "./wetByLocation";
-import {getUv} from "./uvIndex";
 
 function search() {
     document.getElementById("searchButton").addEventListener('click', () => {
@@ -11,8 +10,6 @@ function search() {
         dailyPrognoseByLocation(api);
         getWeatherByLocation(api1);
         searchWeatherByCity(searchedCity);
-        getUv(api);
-
         event.preventDefault()
     });
 }
@@ -22,7 +19,7 @@ function searchWeatherByCity(searchedCity) {
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${searchedCity}&APPID=0599898336f8892a2625cd0151ec957c`).then(result => {
         return result.json();
     }).then(data => {
-        weather.id = data.city.id;
+        weather.id = data.list[0].weather[0].id;
     }).then(function () {
         backgroundChange(weather);
     })

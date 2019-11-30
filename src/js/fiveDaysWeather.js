@@ -1,3 +1,4 @@
+import {getUv} from "./uvIndex";
 
 let day1 = document.getElementById("day1");
 let day1Temp = document.getElementById("day1temp");
@@ -42,8 +43,8 @@ function dailyPrognoseByLocation(api) {
         weather.day4icon = data.list[31].weather[0].icon;
         weather.day5temp = celsius(data.list[39].main.temp);
         weather.day5icon = data.list[39].weather[0].icon;
-        weather.lat = data.city.coord.lat;
-        weather.lon = data.city.coord.lon;
+        weather.lat = data.city.coord.lat
+        weather.lon = data.city.coord.lon
 
     }).then(function () {
         thisWeek(weather);
@@ -92,11 +93,12 @@ function thisWeek(resultFromServer) {
     day5.innerHTML = `${days[now.getDay()+1]}`;
     day5Temp.innerHTML = resultFromServer.day5temp;
     now.setDate(daysSume + 1);
-    day5Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    day5Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
     day5Icon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.day5icon + '.png';
 
+    const apiUV = `http://api.openweathermap.org/data/2.5/uvi?appid=0599898336f8892a2625cd0151ec957c&lat=${resultFromServer.lat}&lon=${resultFromServer.lon}`;
+    getUv(apiUV);
 
 };
-
 
 export {dailyPrognoseByLocation, thisWeek};
