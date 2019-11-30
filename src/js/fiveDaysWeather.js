@@ -1,4 +1,3 @@
-import {backgroundChange} from "./backgroundChange";
 
 let day1 = document.getElementById("day1");
 let day1Temp = document.getElementById("day1temp");
@@ -43,6 +42,8 @@ function dailyPrognoseByLocation(api) {
         weather.day4icon = data.list[31].weather[0].icon;
         weather.day5temp = celsius(data.list[39].main.temp);
         weather.day5icon = data.list[39].weather[0].icon;
+        weather.lat = data.city.coord.lat;
+        weather.lon = data.city.coord.lon;
 
     }).then(function () {
         thisWeek(weather);
@@ -96,5 +97,6 @@ function thisWeek(resultFromServer) {
 
 
 };
+
 
 export {dailyPrognoseByLocation, thisWeek};
