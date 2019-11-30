@@ -1,30 +1,27 @@
 import {backgroundChange} from "./backgroundChange";
-import {thisWeek} from "./fiveDaysWeather";
+import {dailyPrognoseByLocation, getCoord} from "./fiveDaysWeather";
+import {getWeatherByLocation} from "./wetByLocation";
 
 function search() {
     document.getElementById("searchButton").addEventListener('click', () => {
-        let searchedCity = document.getElementById("searchInput").value;
-        searchWeatherByCity(searchedCity)
-        dailyPrognoseByCity(searchedCity);
+        const searchedCity = document.getElementById("searchInput").value;
+        const api = `http://api.openweathermap.org/data/2.5/forecast?q=${searchedCity}&APPID=0599898336f8892a2625cd0151ec957c`;
+        const api1 = `http://api.openweathermap.org/data/2.5/weather?q=${searchedCity}&appid=0599898336f8892a2625cd0151ec957c`;
+        dailyPrognoseByLocation(api);
+        getWeatherByLocation(api1);
+        searchWeatherByCity(searchedCity);
         event.preventDefault()
     });
 }
 
 function searchWeatherByCity(searchedCity) {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${searchedCity}&APPID=0599898336f8892a2625cd0151ec957c&units=metric`).then(result => {
-        return result.json();
-    }).then(result => {
-        backgroundChange(result);
-    })
-}
-
-
-//funkcja pobierająca dane o prognozie na 5dni na podstawie wpisanego przez użytkownika miasta
-function dailyPrognoseByCity(searchedCity) {
+    const weather = [];
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${searchedCity}&APPID=0599898336f8892a2625cd0151ec957c`).then(result => {
         return result.json();
-    }).then(result => {
-        thisWeek(result)
+    }).then(data => {
+        weather.id = data.list[0].weather[0].id;
+    }).then(function () {
+        backgroundChange(weather);
     })
 }
 

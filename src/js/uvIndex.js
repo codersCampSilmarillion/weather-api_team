@@ -1,22 +1,6 @@
 
 let uvIndex = document.getElementById("uv");
 
-function setPositionUv() {
-    if (!('geolocation' in navigator)) {
-        error.style.display = "block";
-        return error.message = `<p>Something go wrong</p>`
-    } else {
-        return navigator.geolocation.getCurrentPosition(setPosition);
-    }
-}
-
-function setPosition(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    const APIKEY = `621ade6f9cf22647cbe0dc0e15904a9c`;
-    let api = `http://api.openweathermap.org/data/2.5/uvi?appid=${APIKEY}&lat=${latitude}&lon=${longitude}`
-    getUv(api);
-}
 
 function getUv(api) {
     const weather = {};
@@ -48,4 +32,4 @@ function getUv(api) {
         })
 }
 
-export {setPositionUv};
+export {getUv};
