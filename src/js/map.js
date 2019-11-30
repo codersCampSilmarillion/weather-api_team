@@ -3,28 +3,14 @@ import {Map, View} from 'ol';
 import XYZ from 'ol/source/XYZ'
 import OSM from 'ol/source/OSM';
 import {Tile as TileLayer} from 'ol/layer';
-
-const APIKEY = `621ade6f9cf22647cbe0dc0e15904a9c`;
-
-function getMap1() {
-    if (!('geolocation' in navigator)) {
-        error.style.display = "block";
-        return error.message = `<p>Something go wrong</p>`
-    } else {
-        return navigator.geolocation.getCurrentPosition(setPosition);
-    }
-}
-
-//user position
-function setPosition(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    let api = `https://tile.openweathermap.org/map/clouds_new/{4}/${latitude}/${longitude}.png?appid=${APIKEY}`;
-    getMap(api);
-}
+import {toLonLat} from "ol/proj";
+import {latLng} from "leaflet/dist/leaflet-src.esm";
 
 
-function getMap(api) {
+function getMap(x, y) {
+    const APIKEY = `621ade6f9cf22647cbe0dc0e15904a9c`;
+    let coordinate = [x, y]
+    let api = `https://tile.openweathermap.org/map/clouds_new/5/{${coordinate[0]}}/{${coordinate[1]}}.png?appid=621ade6f9cf22647cbe0dc0e15904a9c`;
     var main_layer;
     main_layer = new TileLayer({
         source: new OSM({})
@@ -48,5 +34,4 @@ function getMap(api) {
 }
 
 
-
-export {getMap1};
+export {getMap};

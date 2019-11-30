@@ -13,12 +13,16 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "css": "^2.2.4",
     "dateformat": "^3.0.3",
     "il": "0.0.0",
     "jquery": "^3.4.1",
     "jsdom": "^15.2.1",
+    "leaflet": "^1.6.0",
+    "node": "^13.1.0",
     "ol": "^6.1.1",
     "openstreetmap-stream": "^0.1.0",
+    "scss": "^0.2.4",
     "world-map": "0.0.9"
   },
   "devDependencies": {

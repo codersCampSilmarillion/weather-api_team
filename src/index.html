@@ -27,66 +27,64 @@
                 <h3 class="today__title">► Today</h3>
                 <div class="today__weather">
                     <div class="info">
-                        <p class="info__date" id="date">22/11/2019</p>
+                        <p class="info__date" id="date"></p>
                         <p class="info__location">
-                            <span class="info__location--city" id="city">Poznań</span>
+                            <span class="info__location--city" id="city"></span>
                         </p>
                     </div>
                     <container class="general-info">
                         <ul class="current">
-                            <li class="current__hour" id="haur">Monday, 8:15</li>
+                            <li class="current__hour" id="haur"></li>
                             <li class="current__temp" id="temp">
-                                12 <span class="current__temp--celsius">°C</span>
+                                 <span class="current__temp--celsius"></span>
                             </li>
-                            <li class="current__description" id="description">Nieco piźdźi</li>
-                            <li class="current__real-feel" id="detailedDesc">REAL FEEL 17°C</li>
+                            <li class="current__description" id="description"></li>
                         </ul>
                         <ul class="clouds">
-                            <li class="clouds__icon" id="icon"></li>
-                            <li class="clouds__title" id="cloud">Cloudy</li>
-                            <li class="clouds__description" id="cloudDesc">PARTLY</li>
+                            <li class="clouds__icon"><img src="" id="icon"></li>
+                            <li class="clouds__title" id="cloudDecs"></li>
                         </ul>
                     </container>
                     <ul class="detailed-info">
                         <li class="detailed-info__item">
                             <div class="detailed-info__temp-icon"></div>
                             <div class="detailed-info__info">
-                                <div class="detailed-info__value">▾13°C ▴20°C</div>
+                                <div class="detailed-info__value" id="maxmin"></div>
                                 <div class="detailed-info__title">TEMPERATURE</div>
                             </div>
                         </li>
                         <li class="detailed-info__item">
                             <div class="detailed-info__wind-icon"></div>
                             <div class="detailed-info__info">
-                                <div class="detailed-info__value" id="wind">9 km/h</div>
+                                <div class="detailed-info__value" id="wind"></div>
                                 <div class="detailed-info__title">WIND</div>
                             </div>
                         </li>
                         <li class="detailed-info__item">
                             <div class="detailed-info__uv-icon"></div>
                             <div class="detailed-info__info">
-                                <div class="detailed-info__value" id="uv">Low</div>
+                                <div class="detailed-info__value" id="uv"></div>
                                 <div class="detailed-info__title">UV INDEX</div>
                             </div>
                         </li>
                         <li class="detailed-info__item">
                             <div class="detailed-info__rain-icon"></div>
                             <div class="detailed-info__info">
-                                <div class="detailed-info__value">20%</div>
+                                <div class="detailed-info__value" id="rain">20%</div>
                                 <div class="detailed-info__title">RAIN</div>
                             </div>
                         </li>
                         <li class="detailed-info__item">
                             <div class="detailed-info__hum-icon"></div>
                             <div class="detailed-info__info">
-                                <div class="detailed-info__value">40%</div>
+                                <div class="detailed-info__value" id="humidity">40%</div>
                                 <div class="detailed-info__title">HUMIDITY</div>
                             </div>
                         </li>
                         <li class="detailed-info__item">
                             <div class="detailed-info__press-icon"></div>
                             <div class="detailed-info__info">
-                                <div class="detailed-info__value">1020 hPa</div>
+                                <div class="detailed-info__value" id="pressure">1020 hPa</div>
                                 <div class="detailed-info__title">PRESSURE</div>
                             </div>
                         </li>
@@ -168,7 +166,7 @@
     </container>
     <section class="weather-map">
         <h3 class="weather-map__title">► Weather map</h3>
-        <div class="weather-map__map"></div>
+        <div class="weather-map__map" id="map"><span id="adress"></span></div>
     </section>
 </body>
 
