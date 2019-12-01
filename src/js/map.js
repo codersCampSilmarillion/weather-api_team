@@ -1,10 +1,10 @@
-import 'ol/ol.css';
-import {Map, View} from 'ol';
-import XYZ from 'ol/source/XYZ'
-import OSM from 'ol/source/OSM';
-import {Tile as TileLayer} from 'ol/layer';
-import {toLonLat} from "ol/proj";
-import {latLng} from "leaflet/dist/leaflet-src.esm";
+//import 'ol/ol.css';
+//import {Map, View} from 'ol';
+//import XYZ from 'ol/source/XYZ'
+//import OSM from 'ol/source/OSM';
+//import {Tile as TileLayer} from 'ol/layer';
+//import {toLonLat} from "ol/proj";
+//import {latLng} from "leaflet/dist/leaflet-src.esm";
 
 
 function getMap(x, y) {
