@@ -10,9 +10,8 @@ function getTime() {
   const dateFormat = require("dateformat");
   let today = new Date();
   let haur = document.getElementById("haur");
-  dateFormat(today, "h:MM:ss TT");
-  haur.innerHTML = time;
-  var t = setTimeout(getTime, 500);
+  haur.innerHTML = dateFormat(today, "h:MM:ss TT");
+  var t = setTimeout(getTime, 1000);
 }
 
 export { getDate, getTime };
