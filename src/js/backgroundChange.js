@@ -13,27 +13,27 @@ let second = [...second1, ...second2, ...second3]
 //funkcja zmieniająca tło
 function backgroundChange(resultFromServer) {
     if (resultFromServer.id <= 232) { //thunderstorm
-        document.body.style.background = 'linear-gradient(#424242, white)';
+        document.body.style.background = 'linear-gradient(#424242, white) no-repeat';
         first.forEach(el => el.style.color = '#4C4C4C');
         second.forEach(el => el.style.color = '#191919');
     } else if (resultFromServer.id <= 531) { //rain and drizzle
-        document.body.style.background = 'linear-gradient(#0D47A1, white)';
+        document.body.style.background = 'linear-gradient(#0D47A1, white) no-repeat';
         first.forEach(el => el.style.color = '#9999FF');
         second.forEach(el => el.style.color = '#000033');
     } else if (resultFromServer.id <= 622) { //snow
-        document.body.style.background = 'linear-gradient(#CDCDCD, white)';
+        document.body.style.background = 'linear-gradient(#CDCDCD, white) no-repeat';
         first.forEach(el => el.style.color = '#A1A1A1');
         second.forEach(el => el.style.color = '#434343');
     } else if (resultFromServer.id <= 781) { //atmosphere
-        document.body.style.background = 'linear-gradient(#FFEE58, white)';
+        document.body.style.background = 'linear-gradient(#FFEE58, white) no-repeat';
         first.forEach(el => el.style.color = '#FFCA28');
         second.forEach(el => el.style.color = '#F57F17');
     } else if (resultFromServer.id <= 801) { //clear sky and few clouds
-        document.body.style.background = 'linear-gradient(#79CED2, white)';
+        document.body.style.background = 'linear-gradient(#79CED2, white) no-repeat';
         first.forEach(el => el.style.color = '#3366FF');
         second.forEach(el => el.style.color = '#003366');
     } else { //clouds
-        document.body.style.background = 'linear-gradient(#757575 ,white)';
+        document.body.style.background = 'linear-gradient(#757575 ,white) no-repeat';
         first.forEach(el => el.style.color = '#9E9E9E');
         second.forEach(el => el.style.color = '#191919');
     }
