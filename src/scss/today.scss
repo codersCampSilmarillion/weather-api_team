@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 100%;
 
-
     &__title {
         font-style: normal;
         font-weight: normal;
@@ -96,7 +95,7 @@
     align-items: center;
 
     &__icon {
-        background-image: url("../../assets/icons/cloud-icon.svg");
+        background-image: url("../../assets/WetIcons/01d.svg");
         background-position: center center;
         background-size: cover;
         width: 123px;
@@ -114,7 +113,7 @@
     &__description {
         font-weight: normal;
         font-size: 12px;
-        color: #A5A5A5;
+        color: #a5a5a5;
     }
 }
 
@@ -125,7 +124,7 @@
     justify-content: center;
 
     &__item {
-        background: #FAFAFA;
+        background: #fafafa;
         margin-bottom: 12px;
         display: flex;
         align-items: center;
@@ -136,7 +135,7 @@
     &__temp-icon,
     &__wind-icon,
     &__uv-icon,
-    &__rain-icon,
+    &__visibility-icon,
     &__hum-icon,
     &__press-icon {
         min-width: 24px;
@@ -147,29 +146,28 @@
         margin: 18px 18px 18px 0;
     }
 
-
     &__temp-icon {
-        background-image: url("../../assets/icons/temp-icon.svg");
+        background-image: url("../../assets/Icons/temp-icon.svg");
     }
 
     &__wind-icon {
-        background-image: url("../../assets/icons/wind-icon.svg");
+        background-image: url("../../assets/Icons/wind-icon.svg");
     }
 
     &__uv-icon {
-        background-image: url("../../assets/icons/uv-icon.svg");
+        background-image: url("../../assets/Icons/uv-icon.svg");
     }
 
     &__visibility-icon {
-        background-image: url("../../assets/icons/visibility-icon.svg");
+        background-image: url("../../assets/Icons/visibility-icon.svg");
     }
 
     &__hum-icon {
-        background-image: url("../../assets/icons/hum-icon.svg");
+        background-image: url("../../assets/Icons/hum-icon.svg");
     }
 
     &__press-icon {
-        background-image: url("../../assets/icons/press-icon.svg");
+        background-image: url("../../assets/Icons/press-icon.svg");
     }
 
     &__value {

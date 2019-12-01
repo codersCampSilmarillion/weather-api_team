@@ -59,66 +59,6 @@ function celsius(kelwin) {
 
 //funkcja pokazująca prognozę na 5 dni
 function thisWeek(resultFromServer) {
-<<<<<<< HEAD
-  var days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday"
-  ];
-  let now = new Date();
-  let daysSume = now.getDate();
-  day1.innerHTML = `${days[now.getDay() + 1]}`;
-  day1Temp.innerHTML = resultFromServer.day1Temp;
-  now.setDate(daysSume + 1);
-  daysSume = now.getDate();
-  day1Date.innerHTML = `${now.getDate()}/${now.getMonth() +
-    1}/${now.getFullYear()}`;
-  day1Icon.src = "../../assets/WetIcons/" + resultFromServer.day1icon + ".svg";
-
-  day2.innerHTML = `${days[now.getDay() + 1]}`;
-  day2Temp.innerHTML = resultFromServer.day2temp;
-  now.setDate(daysSume + 1);
-  daysSume = now.getDate();
-  day2Date.innerHTML = `${now.getDate()}/${now.getMonth() +
-    1}/${now.getFullYear()}`;
-  day2Icon.src = "../../assets/WetIcons/" + resultFromServer.day2icon + ".svg";
-
-  day3.innerHTML = `${days[now.getDay() + 1]}`;
-  day3Temp.innerHTML = resultFromServer.day3temp;
-  now.setDate(daysSume + 1);
-  daysSume = now.getDate();
-  day3Date.innerHTML = `${now.getDate()}/${now.getMonth() +
-    1}/${now.getFullYear()}`;
-  day3Icon.src = "../../assets/WetIcons/" + resultFromServer.day3icon + ".svg";
-
-  day4.innerHTML = `${days[now.getDay() + 1]}`;
-  day4Temp.innerHTML = resultFromServer.day4temp;
-  now.setDate(daysSume + 1);
-  daysSume = now.getDate();
-  day4Date.innerHTML = `${now.getDate()}/${now.getMonth() +
-    1}/${now.getFullYear()}`;
-  day4Icon.src = "../../assets/WetIcons/" + resultFromServer.day4icon + ".svg";
-
-  day5.innerHTML = `${days[now.getDay() + 1]}`;
-  day5Temp.innerHTML = resultFromServer.day5temp;
-  now.setDate(daysSume + 1);
-  day5Date.innerHTML = `${now.getDate()}/${now.getMonth() +
-    1}/${now.getFullYear()}`;
-  day5Icon.src = "../../assets/WetIcons/" + resultFromServer.day5icon + ".svg";
-
-  const apiUV = `http://api.openweathermap.org/data/2.5/uvi?appid=0599898336f8892a2625cd0151ec957c&lat=${resultFromServer.lat}&lon=${resultFromServer.lon}`;
-  getUv(apiUV);
-}
-=======
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'];
     let now = new Date();
     let daysSume = now.getDate()
@@ -160,6 +100,5 @@ function thisWeek(resultFromServer) {
     getUv(apiUV);
 
 };
->>>>>>> a93d2df23a624009b7826822ec8f4f334c6cee1d
 
 export { dailyPrognoseByLocation, thisWeek };
