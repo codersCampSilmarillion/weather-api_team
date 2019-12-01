@@ -66,34 +66,34 @@ function thisWeek(resultFromServer) {
     now.setDate(daysSume + 1);
     daysSume = now.getDate();
     day1Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
-    day1Icon.src = '../../assets/WetIcons/' + resultFromServer.day1icon + '.svg';
+    day1Icon.className = `this-week__icon${resultFromServer.day1icon}`;
 
     day2.innerHTML = `${days[now.getDay()+1]}`;
     day2Temp.innerHTML = resultFromServer.day2temp;
     now.setDate(daysSume + 1);
     daysSume = now.getDate();
     day2Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
-    day2Icon.src = '../../assets/WetIcons/' + resultFromServer.day2icon + '.svg';
+    day2Icon.className = `this-week__icon${resultFromServer.day2icon}`;
 
     day3.innerHTML = `${days[now.getDay()+1]}`;
     day3Temp.innerHTML = resultFromServer.day3temp;
     now.setDate(daysSume + 1);
     daysSume = now.getDate();
     day3Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
-    day3Icon.src = '../../assets/WetIcons/' + resultFromServer.day3icon + '.svg';
+    day3Icon.className = `this-week__icon${resultFromServer.day3icon}`;
 
     day4.innerHTML = `${days[now.getDay()+1]}`;
     day4Temp.innerHTML = resultFromServer.day4temp;
     now.setDate(daysSume + 1);
     daysSume = now.getDate();
     day4Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
-    day4Icon.src = '../../assets/WetIcons/' + resultFromServer.day4icon + '.svg';
+    day4Icon.className = `this-week__icon${resultFromServer.day4icon}`;
 
     day5.innerHTML = `${days[now.getDay()+1]}`;
     day5Temp.innerHTML = resultFromServer.day5temp;
     now.setDate(daysSume + 1);
     day5Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
-    day5Icon.src = '../../assets/WetIcons/' + resultFromServer.day5icon + '.svg';
+    day5Icon.className = `this-week__icon${resultFromServer.day5icon}`;
 
     const apiUV = `http://api.openweathermap.org/data/2.5/uvi?appid=0599898336f8892a2625cd0151ec957c&lat=${resultFromServer.lat}&lon=${resultFromServer.lon}`;
     getUv(apiUV);
