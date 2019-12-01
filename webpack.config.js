@@ -49,23 +49,11 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.svg$/,
         use: [
           {
-            loader: 'file-loader',
-          },
-        ],
-      }
-    ]
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
+            loader: "file-loader"
+          }
         ]
       }
     ]
@@ -77,6 +65,5 @@ module.exports = {
     port: 3000,
     open: true,
     watchContentBase: true
-  },
-
+  }
 };
