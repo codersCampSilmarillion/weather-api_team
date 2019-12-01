@@ -1,5 +1,4 @@
-import { backgroundChange } from "./backgroundChange";
-import {getUv} from "./uvIndex";
+import { getUv } from "./uvIndex";
 
 let day1 = document.getElementById("day1");
 let day1Temp = document.getElementById("day1temp");
@@ -95,7 +94,6 @@ function thisWeek(resultFromServer) {
     now.setDate(daysSume + 1);
     day5Date.innerHTML = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
     day5Icon.src = '../../assets/WetIcons/' + resultFromServer.day5icon + '.svg';
-
 
     const apiUV = `http://api.openweathermap.org/data/2.5/uvi?appid=0599898336f8892a2625cd0151ec957c&lat=${resultFromServer.lat}&lon=${resultFromServer.lon}`;
     getUv(apiUV);

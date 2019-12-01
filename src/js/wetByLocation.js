@@ -13,6 +13,11 @@ let vis = document.getElementById("rain");
 let detailetDesc = document.getElementById("detailedDesc");
 let cloudDesc = document.getElementById("cloudDecs");
 
+let er = document.getElementById("er");
+let today = document.getElementById("today");
+let weatherMap = document.getElementById("weather-map");
+let aside = document.getElementById("aside");
+
 
 //get weather by localization
 function getWeatherByLocation(api) {
@@ -40,11 +45,14 @@ function getWeatherByLocation(api) {
         })
         .then(function() {
             updateWeatherByLocation(weather);
-            backgroundChange(weather);
             alerts(weather);
-            console.log(weather.icon)
+            today.style.display = 'block';
+            weatherMap.style.display = 'block';
+            aside.style.display = 'block';
+            er.innerHTML = '';
+        }).then(() => {
+            backgroundChange(weather);
         })
-
 }
 
 function colorChange(api) {
@@ -66,7 +74,7 @@ function updateWeatherByLocation(weather) {
     wind.innerHTML = `${weather.wind} m/s`
     humidity.innerHTML = `${weather.humidity} %`;
     pressure.innerHTML = `${weather.pressure} hPa`;
-    (!weather.vis) ? rain.innerHTML = "10 km" : rain.innerHTML = `${(weather.vis/1000)} km`;
+    (!weather.vis) ? rain.innerHTML = "10 km": rain.innerHTML = `${(weather.vis/1000)} km`;
     //cloudDesc.innerHTML = `${weather.desc}`
 
 }
