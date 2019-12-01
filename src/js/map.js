@@ -24,7 +24,7 @@ function getMap(x, y) {
     target: "map",
     layers: [main_layer, layer_temp],
     view: new View({
-      center: [37.41, 8.82],
+      center: [x, y],
       zoom: 4
     })
   });
