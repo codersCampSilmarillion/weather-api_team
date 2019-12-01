@@ -30,4 +30,5 @@ function getMap(x, y) {
   });
 }
 
-export { getMap };
+
+export {getMap};
