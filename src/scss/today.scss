@@ -2,19 +2,17 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
-
     &__title {
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
         margin-bottom: 16px;
     }
-
     &__weather {
         background: #ffffff;
         box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.02);
         border-radius: 20px;
+        padding-top: 5px;
     }
 }
 
@@ -22,21 +20,18 @@
     display: flex;
     flex-direction: column;
     margin: 30px 0 37.5px 30px;
-
     &__date {
         font-style: normal;
         font-weight: normal;
         font-size: 12px;
         color: #a5a5a5;
     }
-
     &__location {
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         letter-spacing: 0.02em;
         color: #343434;
-
         &--city {
             font-weight: bold;
         }
@@ -54,33 +49,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     &__hour {
         font-style: normal;
         font-weight: normal;
         font-size: 12px;
         color: #a5a5a5;
     }
-
     &__temp {
         font-style: normal;
         font-weight: normal;
         font-size: 72px;
         letter-spacing: -0.02em;
         display: flex;
-
         &--celsius {
             font-size: 36px;
         }
     }
-
     &__description {
         font-weight: 500;
         font-size: 18px;
         letter-spacing: 0.02em;
         color: #343434;
     }
-
     &__real-feel {
         font-style: normal;
         font-weight: normal;
@@ -94,23 +84,92 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &__icon {
-        background-image: url("../../assets/icons/cloud-icon.svg");
+    &__icon01d,
+    &__icon01n,
+    &__icon02d,
+    &__icon02n,
+    &__icon03d,
+    &__icon03n,
+    &__icon04d,
+    &__icon04n,
+    &__icon09d,
+    &__icon09n,
+    &__icon10d,
+    &__icon10n,
+    &__icon11d,
+    &__icon11n,
+    &__icon13d,
+    &__icon13n,
+    &__icon50d,
+    &__icon50n,
+    &__icon1232n {
         background-position: center center;
-        background-size: cover;
-        width: 123px;
-        height: 76px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 120px;
         margin-bottom: 24.5px;
     }
-
+    &__icon01d {
+        background-image: url("../../assets/weticons/01d.svg");
+    }
+    &__icon01n {
+        background-image: url("../../assets/weticons/01n.svg");
+    }
+    &__icon02d {
+        background-image: url("../../assets/weticons/02d.svg");
+    }
+    &__icon02n {
+        background-image: url("../../assets/weticons/02n.svg");
+    }
+    &__icon03d {
+        background-image: url("../../assets/weticons/03d.svg");
+    }
+    &__icon03n {
+        background-image: url("../../assets/weticons/03n.svg");
+    }
+    &__icon04d {
+        background-image: url("../../assets/weticons/04d.svg");
+    }
+    &__icon04n {
+        background-image: url("../../assets/weticons/04n.svg");
+    }
+    &__icon09dn {
+        background-image: url("../../assets/weticons/09d.svg");
+    }
+    &__icon10d {
+        background-image: url("../../assets/weticons/10d.svg");
+    }
+    &__icon10n {
+        background-image: url("../../assets/weticons/10n.svg");
+    }
+    &__icon11d {
+        background-image: url("../../assets/weticons/11d.svg");
+    }
+    &__icon11n {
+        background-image: url("../../assets/weticons/11n.svg");
+    }
+    &__icon13d {
+        background-image: url("../../assets/weticons/13d.svg");
+    }
+    &__icon13n {
+        background-image: url("../../assets/weticons/13n.svg");
+    }
+    &__icon50d {
+        background-image: url("../../assets/weticons/50d.svg");
+    }
+    &__icon50n {
+        background-image: url("../../assets/weticons/50n.svg");
+    }
+    &__icon1232n {
+        background-image: url("../../assets/weticons/1232n.svg");
+    }
     &__title {
         font-weight: 500;
         font-size: 18px;
         letter-spacing: 0.02em;
         color: #343434;
     }
-
     &__description {
         font-weight: normal;
         font-size: 12px;
@@ -123,7 +182,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     &__item {
         background: #FAFAFA;
         margin-bottom: 12px;
@@ -132,7 +190,6 @@
         width: 33.33333%;
         padding: 0 7%;
     }
-
     &__temp-icon,
     &__wind-icon,
     &__uv-icon,
@@ -146,38 +203,29 @@
         background-position: center center;
         margin: 18px 18px 18px 0;
     }
-
-
     &__temp-icon {
         background-image: url("../../assets/icons/temp-icon.svg");
     }
-
     &__wind-icon {
         background-image: url("../../assets/icons/wind-icon.svg");
     }
-
     &__uv-icon {
         background-image: url("../../assets/icons/uv-icon.svg");
     }
-
     &__visibility-icon {
         background-image: url("../../assets/icons/visibility-icon.svg");
     }
-
     &__hum-icon {
         background-image: url("../../assets/icons/hum-icon.svg");
     }
-
     &__press-icon {
         background-image: url("../../assets/icons/press-icon.svg");
     }
-
     &__value {
         font-weight: bold;
         font-size: 12px;
         color: #343434;
     }
-
     &__title {
         font-style: normal;
         font-weight: normal;
@@ -197,11 +245,9 @@
     .general-info {
         flex-direction: column;
     }
-
     .clouds {
         margin-top: 30px;
     }
-
     .detailed-info__item {
         width: 100%;
         justify-content: center;
