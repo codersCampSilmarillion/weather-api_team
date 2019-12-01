@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CcWeather</title>
+    <title>WeatherApp</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
+<link href="styles.css?85e82da5e399febd8440" rel="stylesheet"></head>
 
 <body>
     <container class="content-wrapper">
@@ -21,7 +21,7 @@
             <form class="search">
                 <span class="search__icon"></span>
                 <input class="search__input" type="text" placeholder="Search..." id="searchInput">
-                <button id="searchButton">Search</button>
+                <button id="searchButton" style="display: none;">Search</button>
             </form>
             <section class="today">
                 <h3 class="today__title">► Today</h3>
@@ -41,7 +41,7 @@
                             <li class="current__description" id="description"></li>
                         </ul>
                         <ul class="clouds">
-                            <li class="clouds__icon"><img src="" id="icon"></li>
+                            <li class="clouds__icon" id="icon"></li>
                             <li class="clouds__title" id="cloudDecs"></li>
                         </ul>
                     </container>
@@ -68,10 +68,10 @@
                             </div>
                         </li>
                         <li class="detailed-info__item">
-                            <div class="detailed-info__rain-icon"></div>
+                            <div class="detailed-info__visibility-icon"></div>
                             <div class="detailed-info__info">
-                                <div class="detailed-info__value" id="rain">20%</div>
-                                <div class="detailed-info__title">RAIN</div>
+                                <div class="detailed-info__value" id="rain">10km</div>
+                                <div class="detailed-info__title">VISIBILITY</div>
                             </div>
                         </li>
                         <li class="detailed-info__item">
@@ -95,7 +95,7 @@
         <aside class="aside">
             <div class="alerts">
                 <h3 class="alerts__title">► Alerts</h3>
-                <div class="alerts__content" id="alerts"></div>
+                <div class="alerts__content" id="alerts">Currently no alerts.</div>
             </div>
             <div class="this-week">
                 <h3 class="this-week__title">► This week</h3>
@@ -168,12 +168,6 @@
         <h3 class="weather-map__title">► Weather map</h3>
         <div class="weather-map__map" id="map"><span id="adress"></span></div>
     </section>
-    <<<<<<< HEAD <script type="text/javascript" src="main.3666424f7aa644dbe304.js?8040cb007d0e21d62892">
-        </script>
-</body>
-=======
-<script type="text/javascript" src="main.f0974c04614cc9ccab45.js?9f6e5194a3e4c41ac306"></script>
-</body>
->>>>>>> dde0efca061c5bd77659c2e1a02da3b79ef4fcf9
+<script type="text/javascript" src="main.8cc2f6461ea6db311e56.js?85e82da5e399febd8440"></script></body>
 
 </html>
