@@ -11,9 +11,8 @@ function getTime() {
   let today = new Date();
   let haur = document.getElementById("haur");
   dateFormat(today, "h:MM:ss TT");
-  var time = setTimeout(getDate, 500);
   haur.innerHTML = time;
-  var t = setTimeout(startTime, 500);
+  var t = setTimeout(getTime, 500);
 }
 
 export { getDate, getTime };
