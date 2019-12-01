@@ -36,7 +36,7 @@ function showError(error) {
 function setPosition(position) {
     er.innerHTML = '';
     today.style.display = 'block';
-    weatherMap.style.display = 'block';
+    //weatherMap.style.display = 'block';
     aside.style.display = 'block';
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
