@@ -27,7 +27,7 @@ function searchWeatherByCity(searchedCity) {
         weather.id = data.list[0].weather[0].id;
     }).then(() => {
         today.style.display = 'block';
-        weatherMap.style.display = 'block';
+        // weatherMap.style.display = 'block';
         aside.style.display = 'block';
         er.innerHTML = '';
     }).catch(() => {
