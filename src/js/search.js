@@ -8,11 +8,11 @@ let weatherMap = document.getElementById("weather-map");
 let aside = document.getElementById("aside");
 
 function search() {
-    document.getElementById("searchButton").addEventListener('click', async function() {
+    document.getElementById("searchButton").addEventListener('click', function() {
         const searchedCity = document.getElementById("searchInput").value;
         const api = `http://api.openweathermap.org/data/2.5/forecast?q=${searchedCity}&APPID=0599898336f8892a2625cd0151ec957c`;
         const api1 = `http://api.openweathermap.org/data/2.5/weather?q=${searchedCity}&appid=0599898336f8892a2625cd0151ec957c`;
-        await getWeatherByLocation(api1);
+        getWeatherByLocation(api1);
         searchWeatherByCity(searchedCity);
         dailyPrognoseByLocation(api);
         event.preventDefault()
