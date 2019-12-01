@@ -30,8 +30,6 @@ function searchWeatherByCity(searchedCity) {
         weatherMap.style.display = 'block';
         aside.style.display = 'block';
         er.innerHTML = '';
-    }).then(function() {
-        backgroundChange(weather);
     }).catch(() => {
         er.innerHTML = "Cannot show a forecast for that city"
         today.style.display = 'none';
