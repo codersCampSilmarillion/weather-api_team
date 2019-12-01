@@ -69,7 +69,7 @@ function updateWeatherByLocation(weather) {
   city.innerHTML = `${weather.city} ${weather.country}`;
   temp.innerHTML = `${weather.temp}&degC`;
   desc.innerHTML = `${weather.description}`;
-  icon.style.background = `url("../../assets/weticons/${weather.icon}.svg")`;
+  icon.className = `clouds__icon${weather.icon}`;
   maxmin.innerHTML = `▾${weather.min} &degC▴${weather.max} &degC`;
   wind.innerHTML = `${weather.wind} m/s`;
   humidity.innerHTML = `${weather.humidity} %`;

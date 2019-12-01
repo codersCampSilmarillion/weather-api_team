@@ -14,6 +14,7 @@
         background: #ffffff;
         box-shadow: 8px 12px 10px rgba(0, 0, 0, 0.02);
         border-radius: 20px;
+        padding-top: 5px;
     }
 }
 
@@ -94,13 +95,103 @@
     flex-direction: column;
     align-items: center;
 
-    &__icon {
-        background-image: url("../../assets/WetIcons/01d.svg");
+    &__icon01d,
+    &__icon01n,
+    &__icon02d,
+    &__icon02n,
+    &__icon03d,
+    &__icon03n,
+    &__icon04d,
+    &__icon04n,
+    &__icon09d,
+    &__icon09n,
+    &__icon10d,
+    &__icon10n,
+    &__icon11d,
+    &__icon11n,
+    &__icon13d,
+    &__icon13n,
+    &__icon50d,
+    &__icon50n,
+    &__icon1232n {
         background-position: center center;
-        background-size: cover;
-        width: 123px;
-        height: 76px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 120px;
         margin-bottom: 24.5px;
+    }
+
+    &__icon01d {
+        background-image: url("../../assets/weticons/01d.svg");
+    }
+
+    &__icon01n {
+        background-image: url("../../assets/weticons/01n.svg");
+    }
+
+    &__icon02d {
+        background-image: url("../../assets/weticons/02d.svg");
+    }
+
+    &__icon02n {
+        background-image: url("../../assets/weticons/02n.svg");
+    }
+
+    &__icon03d {
+        background-image: url("../../assets/weticons/03d.svg");
+    }
+
+    &__icon03n {
+        background-image: url("../../assets/weticons/03n.svg");
+    }
+
+    &__icon04d {
+        background-image: url("../../assets/weticons/04d.svg");
+    }
+
+    &__icon04n {
+        background-image: url("../../assets/weticons/04n.svg");
+    }
+
+    &__icon09dn {
+        background-image: url("../../assets/weticons/09d.svg");
+    }
+
+    &__icon10d {
+        background-image: url("../../assets/weticons/10d.svg");
+    }
+
+    &__icon10n {
+        background-image: url("../../assets/weticons/10n.svg");
+    }
+
+    &__icon11d {
+        background-image: url("../../assets/weticons/11d.svg");
+    }
+
+    &__icon11n {
+        background-image: url("../../assets/weticons/11n.svg");
+    }
+
+    &__icon13d {
+        background-image: url("../../assets/weticons/13d.svg");
+    }
+
+    &__icon13n {
+        background-image: url("../../assets/weticons/13n.svg");
+    }
+
+    &__icon50d {
+        background-image: url("../../assets/weticons/50d.svg");
+    }
+
+    &__icon50n {
+        background-image: url("../../assets/weticons/50n.svg");
+    }
+
+    &__icon1232n {
+        background-image: url("../../assets/weticons/1232n.svg");
     }
 
     &__title {
