@@ -23,7 +23,8 @@
                 <input class="search__input" type="text" placeholder="Search..." id="searchInput">
                 <button id="searchButton" style="display: none;">Search</button>
             </form>
-            <section class="today">
+            <section id="er"></section>
+            <section class="today" id="today" style="display: none;">
                 <h3 class="today__title">► Today</h3>
                 <div class="today__weather">
                     <div class="info">
@@ -92,7 +93,7 @@
                 </div>
             </section>
         </main>
-        <aside class="aside">
+        <aside class="aside" id="aside" style="display: none;">
             <div class="alerts">
                 <h3 class="alerts__title">► Alerts</h3>
                 <div class="alerts__content" id="alerts">Currently no alerts.</div>
@@ -106,7 +107,7 @@
                             <div class="this-week__temp">
                                 <span id="day1temp">15</span><span class="this-week__temp--celsius">°C</span>
                             </div>
-                        </div> 
+                        </div>
                         <div class="this-week__right">
                             <span class="this-week__date" id="day1date">22/11/2019</span>
                             <span class="this-week__icon"><img src="" id="day1icon"></span>
@@ -164,7 +165,7 @@
             </div>
         </aside>
     </container>
-    <section class="weather-map">
+    <section class="weather-map" id="weather-map" style="display: none;">
         <h3 class="weather-map__title">► Weather map</h3>
         <div class="weather-map__map" id="map"><span id="adress"></span></div>
     </section>
