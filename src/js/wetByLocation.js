@@ -46,7 +46,7 @@ function getWeatherByLocation(api) {
       updateWeatherByLocation(weather);
       alerts(weather);
       today.style.display = "block";
-      weatherMap.style.display = "block";
+      //weatherMap.style.display = "block";
       aside.style.display = "block";
       er.innerHTML = "";
     })
